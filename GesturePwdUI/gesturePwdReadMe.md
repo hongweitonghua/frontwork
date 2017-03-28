@@ -96,4 +96,4 @@ js/GesturePwd-core.js`下，将他们引入。
 
  * PC端查看[canvas手势密码demo](http://htmlpreview.github.io/?https://github.com/hongweitonghua/frontwork/blob/master/GesturePwdUI/index.html)
  * 手机可扫描以下二维码查看<br>
- ![手势密码二维码](https://github.com/hongweitonghua/frontwork/blob/master/GesturePwdUI/erweima.png "百度logo")
+ ![手势密码二维码](https://github.com/hongweitonghua/frontwork/blob/master/GesturePwdUI/erweima.png "手势密码二维码")
