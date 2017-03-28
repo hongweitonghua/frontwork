@@ -1,0 +1,49 @@
+ 
+ body {
+        text-align: center;
+        background-color: #f0f0f2;
+        color: #101010;
+        font-family: "黑体";
+    }
+    
+    .wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .wrap .title {
+        color: #101010;
+        border-bottom: 1px solid #e9e9eb;
+        font-weight: normal;
+    }
+    
+    .wrap .title p {
+        margin: 0;
+    }
+    
+    .wrap canvas {
+        width: 300px;
+        height: 300px;
+        display: inline-block;
+        margin-top: 15px;
+    }
+    
+    .wrap .inputGroup {
+        margin-top: 35px;
+        margin-left: -100px;
+    }
+    
+    .wrap .inputGroup input {
+        position: relative;
+        margin-left: -100px;
+    }
+    
+    .wrap .inputGroup label {
+        position: absolute;
+        left: -50px;
+        display: inline-block;
+        width: 100%;
+    }

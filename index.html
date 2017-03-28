@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="zhouhongwei,hzzhw2016@163.com">
+    <meta name="key" content="gesturePassword,canvas,OOP">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>GesturePwd-index</title>
+    <link rel="stylesheet" type="text/css" href="css/gesturePwd-theme.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="title" class="title">
+            <h4>手势密码</h4>
+            <!--  <p style="height: 1px; background-color:#f6f6f6"></p> 
+            <p style="height: 1px; background-color:#fcfcfc"></p>-->
+            <p style="height: 1px; background-color:#bcbcbc"></p>
+        </div>
+    
+        <canvas id="canvas"></canvas>
+        <p id="resultInfo">请输入手势密码</p>
+        <div class="inputGroup" id="input_group">
+            <p>
+                <label for="setPwd">设置密码</label>
+                <input type="radio" id="setPwd" name="selectWay" value="1" checked>
+            </p>
+            <p>
+                <input type="radio" id="checkPwd" name="selectWay" value="2">
+                <label for="checkPwd">验证密码</label>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/GesturePwd-core.js"></script>
+    <script type="text/javascript">
+    var canvas = document.getElementById("canvas");
+    var pwd = new GesturePwd({
+        canvas: canvas, //canvas元素
+        width: 300,
+        height: 300,
+        matrixOrder: 3,//密码矩阵维数      
+        pwdStyle:{  //密码样式
+                genericStyle:{
+                    strokeStyle : "#c8c8c8",
+                    fillStyle : '#ffffff',
+                    lineWidth : 4
+                },
+                errorStyle:{
+                    strokeStyle : "#000000",
+                    fillStyle : '#ffa726',
+                    lineWidth : 4
+                },
+                selectStyle:{    
+                    strokeStyle : "#fa8f09",
+                    fillStyle : '#ffa726',
+                    lineWidth : 4
+                },
+                lineStyle:{
+                    strokeStyle : "#df3134",
+                    fillStyle : '',
+                    lineWidth : 4
+                }
+         }
+    });
+    pwd.init();
+    </script>
+</body>
+
+</html>
