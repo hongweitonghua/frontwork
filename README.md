@@ -8,3 +8,9 @@
  ![手势密码二维码](https://github.com/hongweitonghua/frontwork/blob/master/GesturePwdUI/erweima.png "手势密码二维码")
 
 ## 移动端-微金所
+ * 使用bootstrap前端框架，jquery库完成； 
+ * 支持响应式
+ * 除轮播图图片外，均以字体图标方式显示，减少http请求
+ * 轮播图：图片在大屏幕下以背景图显示，小屏幕下使用img标签方式（等比例放缩），支持手动滑动图片实现轮播图图片切换
+ * 详细使用文档可查看[微金所详细文档](https://github.com/hongweitonghua/frontwork/blob/master/weijinsuo/note.md)
+ * PC端查看[移动端-微金所demo](http://htmlpreview.github.io/?https://github.com/hongweitonghua/frontwork/blob/master/weijinsuo/index.html)
