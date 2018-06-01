@@ -18,5 +18,5 @@
  
 ## 根据url生成二维码图片
  * QRCode.js 是一个用于生成二维码图片的插件。
- * 相关项目下载与查看[下载与查看](https://github.com/hongweitonghua/frontwork/tree/daily/1.0.1/erweimaToPic)
- * PC端查看：[查看生成二维码demo](http://htmlpreview.github.io/?https://github.com/hongweitonghua/frontwork/blob/daily/1.0.1/erweimaToPic/erweima.html)
+ * 相关项目下载与查看[下载与查看](https://github.com/hongweitonghua/frontwork/tree/master/erweimaToPic)
+ * PC端查看：[查看生成二维码demo](http://htmlpreview.github.io/?https://github.com/hongweitonghua/frontwork/blob/master/erweimaToPic/erweima.html)
