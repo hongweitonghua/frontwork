@@ -9,58 +9,41 @@
 </head>
 
 <body>
-    <div id="code"></div>
-    <img id="img" />
-
-    <!-- <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-        <script type="text/javascript">
-            var qrcode=$("#code").qrcode({ 
-                render:'canvas||table',
-                width: 200, //宽度 
-                height:200, //高度 
-                text: "http://www.baidu.com" //任意内容 
-            }).hide(); 
-            var canvas=qrcode.find('canvas').get(0);  
-            //如果有循环,此句必不可少 qrcode.find('canvas').remove();
-            var data = canvas.toDataURL('image/jpg');
-            $('#img').attr('src',data) ;
-            saveFile(data,"fd范德萨范德萨");
-        
-            //转为图片的方法,需要上门的data
-            function saveFile(data,filename){
-                var save_link=document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
-                save_link.href=data;
-                save_link.download=filename;
-                var event=document.createEvent('MouseEvents');
-                event.initMouseEvent('click',true,false,window,0,0,0,0,0,false,false,false,false,0,null);
-                save_link.dispatchEvent(event);
-            };
-        </script> -->
-
-
+    <input type="text" id="txt_url" />
+    <button onclick="getErweima()">点击生成二维码</button>
+    <button onclick="getErweimaByparams()">根据参数生成二维码</button>
+    <!-- 展现二维码区域 -->
     <div id="qrcode"></div>
 
     <script src="./qrcodejs-master/qrcode.js"></script>
-    <!-- <script type="text/javascript">
-        new QRCode(document.getElementById("qrcode"), "http://baidu.com");
-    </script> -->
     <script>
-        // 设置参数方式
-        var qrcode = new QRCode('qrcode', {
-            text: 'your content',
-            width: 128,
-            height: 128,
-            colorDark: '#000000',
-            colorLight: '#ffffff',
-            correctLevel: QRCode.CorrectLevel.H
-        });
+        function getErweima(){
+            let value_url = document.getElementById('txt_url').value;
+            //清空元素内容
+            let elem = document.getElementById("qrcode");
+            elem.innerHTML="";
+            //生成二维码
+            new QRCode(elem, value_url);
+        }
+        function getErweimaByparams() {
+            let value_url = document.getElementById('txt_url').value;
+            let elem = document.getElementById("qrcode");
+            elem.innerHTML="";
+            // 设置参数方式
+            var qrcode = new QRCode('qrcode', {
+                text: 'your content',
+                width: 128,
+                height: 128,
+                colorDark: '#000000',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
 
-        // 使用 API
-        qrcode.clear();
-        qrcode.makeCode('http://baidu.com');
+            // 使用 API
+            qrcode.clear();
+            qrcode.makeCode(value_url);
+        }
+
     </script>
 </body>
 
